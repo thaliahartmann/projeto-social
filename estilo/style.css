@@ -10,34 +10,27 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+     
+    min-height: 100vh;
+
+    background-image: url(../imagens/fundo-madeira.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
 /* ----------------------------------------------------------
-    Plano de fundo + celular
+    IPHONE
 ---------------------------------------------------------- */
 
-body {
-    background-image: url(../imagens/fundo.png);
-    background-size: cover;
-}
-    /* ✅ centraliza o celular nos dois eixos */
-
-#container {
-    position: relative;
-    width: 30%;
-    max-width: 300px;
-    margin: auto;
-}
-
-#container > img {
-    width: 100%;
-    height: auto;
+div > img#iphone {
     display: block;
+    margin: auto;
+
 }
 
-#tela {
-    position: absolute;
-    top: 19%;
-    left: 8%;
-    width: 84%;
-    height: 62%;
-    border: none;
-    }
