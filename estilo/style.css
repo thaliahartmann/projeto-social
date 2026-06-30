@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-/* ----------------------------------------------------------
-    Globais
----------------------------------------------------------- */
 
 * {
     margin: 0;
@@ -11,26 +8,74 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-     
-    min-height: 100vh;
-
-    background-image: url(../imagens/fundo-madeira.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url(../imagens/fundo-madeira.jpg); /* imagem de fundo do site */
+    background-size: cover; /*imagem fica infinita */
+    background-repeat: no-repeat top center; /* imagem não repete*/
 }
 
+main {
+    position: relative;  /* pai */
+    height: 100vh;
 
+}
 
 /* ----------------------------------------------------------
     IPHONE
 ---------------------------------------------------------- */
 
-div > img#iphone {
-    display: block;
-    margin: auto;
+#iphone {
+    position: absolute; /* filho */
+    top: 50%; /* move 50% da altura do pai para baixo */
+    left: 50%;  /* move 50% da largura do pai para a direita */
+    transform: translate(-50%, -50%); /* não entendi esse */
+}
+
+
+
+
+/* ----------------------------------------------------------
+  FRAME
+---------------------------------------------------------- */
+
+iframe#tela {
+    position: absolute; /* filho */
+    top: 50%; /* move 50% da altura do pai para baixo */
+    left: 50%;  /* move 50% da largura do pai para a direita */
+    transform: translate(-50%, -50%); /* não entendi esse */
+    width: 50%; /* para deixar responsivo? */
+    height: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------------
+    ICONES DAS REDES SOCIAIS
+---------------------------------------------------------- */
+
+#redes-sociais{ /*configuração para a div do ID? */
+    position: absolute; /* filho */
+    top: 25%; /* move 25% da altura do pai para a baixo ou cima? */
+    left: 95%; /* move 95% da altura do pai para a direita? */
 
 }
 
+#redes-sociais img { /* configurações só para as imagens do ID */
+    display: block; /* cada imagem ocupa uma linha */
+    padding: 10px; /* espaçamento vertical entre os itens */
+    width: 85px; /* tamanho da imagem */
+    border-radius: 50%; /* deixar a imagem redondinha */
+    
+}
