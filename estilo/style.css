@@ -11,6 +11,7 @@ body {
     background-image: url(../imagens/fundo-madeira.jpg); /* imagem de fundo do site */
     background-size: cover; /*imagem fica infinita */
     background-repeat: no-repeat top center; /* imagem não repete*/
+    background-attachment: fixed;  /* efeito parallax */
 }
 
 main {
@@ -28,6 +29,10 @@ main {
     top: 50%; /* move 50% da altura do pai para baixo */
     left: 50%;  /* move 50% da largura do pai para a direita */
     transform: translate(-50%, -50%); /* não entendi esse */
+    
+    height: 627px;
+    width: 311px;
+    background-image: url(../imagens/frame-iphone.png);
 }
 
 
@@ -38,27 +43,12 @@ main {
 ---------------------------------------------------------- */
 
 iframe#tela {
-    position: absolute; /* filho */
-    top: 50%; /* move 50% da altura do pai para baixo */
-    left: 50%;  /* move 50% da largura do pai para a direita */
-    transform: translate(-50%, -50%); /* não entendi esse */
-    width: 50%; /* para deixar responsivo? */
-    height: 50%;
+    position: relative;
+    top: 296px;
+    left: 908px;
+    width: 269px;
+    height: 471px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* ----------------------------------------------------------
@@ -77,5 +67,12 @@ iframe#tela {
     padding: 10px; /* espaçamento vertical entre os itens */
     width: 85px; /* tamanho da imagem */
     border-radius: 50%; /* deixar a imagem redondinha */
-    
 }
+
+/* ANOTAR
+nav#redes-sociais img:hover { 
+    border: 2px solid rgba(255, 255, 255, 0.365);
+    transform: translate(-3px, -3px); 
+    box-shadow: 5px 5px 10px black;
+    transition: transform .3s, border 1s;  
+}    */
